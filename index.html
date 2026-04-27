@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+CTYPE html>
 <html lang="zh-TW" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
@@ -14,15 +14,18 @@
         body {
             font-family: 'Quicksand', sans-serif;
             background-color: #FFF9F0; /* 溫暖的奶油白底色 */
-            color: #5D4037; /* 柔和的深咖啡色，取代死板的純黑 */
+            color: #5D4037; /* 柔和的深咖啡色 */
         }
         
         .font-cute {
             font-family: 'Nunito', sans-serif;
         }
 
-        /* 可愛的游標 (選用：把游標變成小肉球) */
-        /* body { cursor: url('https://cdn-icons-png.flaticon.com/32/1076/1076928.png'), auto; } */
+        /* 可選：讓捲軸也變得有點可愛 */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #FFF9F0; }
+        ::-webkit-scrollbar-thumb { background: #FFCC80; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #FFB74D; }
     </style>
 </head>
 <body class="antialiased selection:bg-rose-300 selection:text-white">
@@ -34,12 +37,14 @@
         </button>
         <div class="hidden md:flex gap-6 font-cute font-bold text-amber-700">
             <a href="#about" class="hover:text-rose-400 transition-colors">About</a>
+            <a href="#portfolio" class="hover:text-rose-400 transition-colors">Work</a>
             <a href="#contact" class="hover:text-rose-400 transition-colors">Contact</a>
         </div>
     </nav>
 
     <div id="mobile-menu" class="hidden fixed inset-0 bg-[#FFF9F0] z-40 flex flex-col justify-center items-center gap-8 text-2xl font-cute font-bold text-amber-700">
         <a href="#about" class="hover:text-rose-400 transition-colors">About</a>
+        <a href="#portfolio" class="hover:text-rose-400 transition-colors">Work</a>
         <a href="#contact" class="hover:text-rose-400 transition-colors">Contact</a>
     </div>
 
@@ -56,7 +61,7 @@
         </p>
         
         <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
-            <a href="#about" class="px-8 py-3 rounded-full bg-amber-500 hover:bg-amber-400 text-white font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+            <a href="#portfolio" class="px-8 py-3 rounded-full bg-amber-500 hover:bg-amber-400 text-white font-bold shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
                 看看我的作品 🦴
             </a>
             <a href="#contact" class="px-8 py-3 rounded-full bg-white border-2 border-amber-300 text-amber-600 hover:bg-amber-50 font-bold shadow-sm hover:shadow-md transition-all duration-300">
@@ -69,18 +74,71 @@
     <section id="about" class="py-24 px-6 max-w-4xl mx-auto border-t-2 border-amber-100/50 relative">
         
         <h2 class="text-3xl md:text-4xl font-extrabold text-amber-800 mb-8 flex items-center gap-3">
-            <span class="text-rose-400 font-cute text-2xl">🐹</span> 關於這個人
+            <span class="text-rose-400 font-cute text-2xl">🐹</span> 關於這隻生物
         </h2>
         
         <div class="text-stone-600 leading-loose space-y-6 text-lg bg-white p-8 rounded-3xl shadow-sm border border-amber-50">
             <p>
-                [介紹自己：就讀台北大學社工系的大學生]
+                [一位大學生，喜歡把網頁做得像毛小孩一樣討人喜歡、平易近人！🐱✨]
             </p>
             <p>
-                [第二段：喜歡可愛動物，正在學怎麼寫程式....。]
+                [就讀台北大學社工系的大學生，正在學習怎麼寫程式]
             </p>
         </div>
         
+    </section>
+
+    <section id="portfolio" class="py-24 px-6 max-w-5xl mx-auto border-t-2 border-amber-100/50">
+        
+        <h2 class="text-3xl md:text-4xl font-extrabold text-amber-800 mb-12 flex items-center gap-3">
+            <span class="text-rose-400 font-cute text-2xl">🎨</span> 我的作品收藏夾
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+            
+            <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-amber-50 hover:-translate-y-2">
+                <div class="aspect-video bg-rose-100 flex items-center justify-center text-rose-300 relative">
+                    <span class="text-5xl">🐱</span>
+                    <div class="absolute top-4 right-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-rose-400 shadow-sm">
+                        New!
+                    </div>
+                </div>
+                
+                <div class="p-8">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-3 py-1 bg-amber-100 text-amber-700 text-xs font-bold rounded-full">Tailwind 🦴</span>
+                        <span class="px-3 py-1 bg-blue-100 text-blue-700 text-xs font-bold rounded-full">React 🐟</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-amber-900 mb-3">我的目標</h3>
+                    <p class="text-stone-500 mb-6 leading-relaxed">
+                        在大學的這幾年，我的目標有.....
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-rose-400 font-bold hover:text-rose-500 transition-colors">
+                        查看詳情 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="group bg-white rounded-[2.5rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 border border-amber-50 hover:-translate-y-2">
+                <div class="aspect-video bg-amber-100 flex items-center justify-center text-amber-300">
+                    <span class="text-5xl">🐶</span>
+                </div>
+                <div class="p-8">
+                    <div class="flex gap-2 mb-4">
+                        <span class="px-3 py-1 bg-green-100 text-green-700 text-xs font-bold rounded-full">Vue 🌿</span>
+                        <span class="px-3 py-1 bg-purple-100 text-purple-700 text-xs font-bold rounded-full">Firebase ☁️</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-amber-900 mb-3">我的作品集</h3>
+                    <p class="text-stone-500 mb-6 leading-relaxed">
+                       這裡面有我的作品，歡迎來看看
+                    </p>
+                    <a href="#" class="inline-flex items-center gap-2 text-rose-400 font-bold hover:text-rose-500 transition-colors">
+                        查看詳情 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    </a>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <section id="contact" class="py-32 px-6 max-w-4xl mx-auto border-t-2 border-amber-100/50 text-center">
@@ -90,31 +148,23 @@
         </h2>
         
         <p class="text-stone-500 mb-12 max-w-xl mx-auto text-lg font-medium">
-            無論是有趣的專案想找夥伴、有香噴噴的職缺，或是單純想聊聊天，都歡迎隨時敲敲我的門！
+            無論是有趣的專案想找夥伴、有職缺，或是單純想聊聊天，都歡迎隨時敲敲我的門！
         </p>
         
         <div class="flex flex-wrap justify-center gap-8 md:gap-16">
             
             <a href="mailto:your.email@example.com" class="group flex flex-col items-center gap-3 text-amber-700 hover:text-rose-400 transition-transform hover:-translate-y-2 duration-300">
-                <div class="p-4 bg-white rounded-full shadow-md group-hover:shadow-lg">
+                <div class="p-4 bg-white rounded-full shadow-md group-hover:shadow-lg transition-shadow">
                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
                 </div>
                 <span class="font-cute font-bold text-sm">Email</span>
             </a>
             
             <a href="https://github.com/[你的帳號]" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-3 text-amber-700 hover:text-rose-400 transition-transform hover:-translate-y-2 duration-300">
-                <div class="p-4 bg-white rounded-full shadow-md group-hover:shadow-lg">
+                <div class="p-4 bg-white rounded-full shadow-md group-hover:shadow-lg transition-shadow">
                     <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.164 22 16.418 22 12c0-5.523-4.477-10-10-10z"></path></svg>
                 </div>
                 <span class="font-cute font-bold text-sm">GitHub</span>
             </a>
             
-        </div>
-    </section>
-
-    <footer class="py-8 text-center text-stone-400 font-cute text-sm">
-        <p>Built with 🥕 and fluffy dreams. &copy; 2026 [CHUEH LIN]</p>
-    </footer>
-
-</body>
-</html>
+            <a href="https://linkedin.com/in/[你的帳號]" target="_blank" rel="noopener noreferrer" class="group flex flex-col items-center gap-3 text-amber-700 hover:text-rose-400 transition-transform hover:-translate-y-2 duration-
