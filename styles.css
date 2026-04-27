@@ -1,14 +1,15 @@
 /* ====================
-   CSS 變數設定 (色彩與字體)
+   CSS 變數設定 (可愛動物風色彩與字體)
    ==================== */
 :root {
-    --bg-color: #0a192f;        /* 深藍色背景 (科技感) */
-    --text-primary: #ccd6f6;    /* 主要文字顏色 (偏白) */
-    --text-secondary: #8892b0;  /* 次要文字顏色 (灰藍) */
-    --accent-color: #64ffda;    /* 螢光青色 (科技感點綴) */
+    --bg-color: #FFF9F0;        /* 溫暖奶油底色 */
+    --text-primary: #5D4037;    /* 柔和深咖啡色 */
+    --text-secondary: #8D6E63;  /* 拿鐵色 */
+    --accent-color: #FF8A65;    /* 活潑的鮭魚橘粉色 */
+    --accent-secondary: #F48FB1;/* 肉球粉色 */
     
-    --font-main: 'Inter', sans-serif;
-    --font-mono: 'Fira Code', monospace;
+    --font-main: 'Quicksand', sans-serif;
+    --font-cute: 'Nunito', sans-serif;
 }
 
 /* ====================
@@ -21,7 +22,6 @@
 }
 
 html {
-    /* 讓錨點連結 (#about 等) 擁有平滑滾動效果 */
     scroll-behavior: smooth; 
 }
 
@@ -33,172 +33,17 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* 輔助 class */
-.font-mono {
-    font-family: var(--font-mono);
-    color: var(--accent-color);
+/* 讓捲軸也變得有點可愛 (選用) */
+::-webkit-scrollbar {
+    width: 10px;
 }
-
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 24px;
+::-webkit-scrollbar-track {
+    background: #FFF9F0; 
 }
-
-.section {
-    padding: 100px 0;
-    min-height: 100vh; /* 確保每個區塊至少有螢幕高度 */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+::-webkit-scrollbar-thumb {
+    background: #FFCC80; 
+    border-radius: 10px;
 }
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-/* ====================
-   Hero Section 樣式
-   ==================== */
-.hero-greeting {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-
-.hero-name {
-    font-size: clamp(40px, 8vw, 80px); /* 響應式字體大小 */
-    font-weight: 700;
-    line-height: 1.1;
-    margin-bottom: 10px;
-}
-
-.hero-role {
-    font-size: clamp(30px, 6vw, 60px);
-    font-weight: 600;
-    color: var(--text-secondary);
-    line-height: 1.1;
-    margin-bottom: 30px;
-}
-
-.hero-description {
-    color: var(--text-secondary);
-    max-width: 540px;
-    font-size: 1.125rem;
-    margin-bottom: 50px;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* 空間不夠時自動換行 */
-}
-
-/* 按鈕樣式 */
-.btn {
-    display: inline-block;
-    padding: 16px 32px;
-    border-radius: 4px;
-    font-family: var(--font-mono);
-    font-size: 0.875rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.btn-primary {
-    background-color: var(--accent-color);
-    color: var(--bg-color);
-    border: 1px solid var(--accent-color);
-}
-
-.btn-primary:hover {
-    background-color: transparent;
-    color: var(--accent-color);
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: var(--accent-color);
-    border: 1px solid var(--accent-color);
-}
-
-.btn-outline:hover {
-    background-color: rgba(100, 255, 218, 0.1);
-}
-
-/* ====================
-   About Section 樣式
-   ==================== */
-.about-content {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-    max-width: 600px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-}
-
-/* ====================
-   Contact Section 樣式
-   ==================== */
-.contact-section {
-    text-align: center;
-    align-items: center;
-}
-
-.contact-description {
-    color: var(--text-secondary);
-    font-size: 1.125rem;
-    max-width: 600px;
-    margin: 0 auto 50px auto;
-}
-
-.contact-links {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.social-link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.social-link:hover {
-    color: var(--accent-color);
-}
-
-.social-link .icon {
-    width: 32px;
-    height: 32px;
-}
-
-.social-link .font-mono {
-    font-size: 0.875rem;
-}
-
-/* ====================
-   JS 動畫輔助 class
-   ==================== */
-.reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-
-.reveal-on-scroll.visible {
-    opacity: 1;
-    transform: translateY(0);
+::-webkit-scrollbar-thumb:hover {
+    background: #FFB74D; 
 }
